@@ -194,7 +194,7 @@ VPCS> show arp
 📁 [p2_arp_node2.pcap](p2_arp_node2.pcapng)
 
 
-📁 **`p2_arp_node3.pcap`**
+📁 [p2_arp_node3.pcap](./p2_arp_node3.pcapng)
 
 # Part 3 : DHCP is a nice guy
 
