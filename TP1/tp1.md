@@ -259,18 +259,41 @@ DDORA IP 10.1.1.47/24 GW 10.1.1.253
 🌞 **Installez et configurez un serveur DHCP** sur votre machine attaquante
 
 ```
+[root@atk ~]# systemctl status dnsmasq
+● dnsmasq.service - DNS caching server.
+     Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; enabled; preset: disabled)
+     Active: active (running) since Thu 2026-01-08 15:41:14 CET; 4min 3s ago
+ Invocation: 1ce686c97ca44f9d9cfd39080e92c812
+    Process: 820 ExecStart=/usr/sbin/dnsmasq (code=exited, status=0/SUCCESS)
+   Main PID: 844 (dnsmasq)
+      Tasks: 1 (limit: 5840)
+     Memory: 1.8M (peak: 2.2M)
+        CPU: 44ms
+     CGroup: /system.slice/dnsmasq.service
+             └─844 /usr/sbin/dnsmasq
 
+janv. 08 15:41:14 atk systemd[1]: Started dnsmasq.service - DNS caching server..
+janv. 08 15:41:14 atk dnsmasq[844]: reading /etc/resolv.conf
+janv. 08 15:41:14 atk dnsmasq[844]: using nameserver 172.26.129.138#53
+janv. 08 15:41:14 atk dnsmasq[844]: using nameserver 172.26.129.139#53
+janv. 08 15:42:55 atk dnsmasq-dhcp[844]: DHCPDISCOVER(enp0s8) 00:50:79:66:68:01
+janv. 08 15:42:55 atk dnsmasq-dhcp[844]: DHCPOFFER(enp0s8) 10.1.1.246 00:50:79:66:68:01
+janv. 08 15:42:55 atk dnsmasq-dhcp[844]: DHCPDISCOVER(enp0s8) 00:50:79:66:68:01
+janv. 08 15:42:55 atk dnsmasq-dhcp[844]: DHCPOFFER(enp0s8) 10.1.1.246 00:50:79:66:68:01
+janv. 08 15:42:56 atk dnsmasq-dhcp[844]: DHCPREQUEST(enp0s8) 10.1.1.246 00:50:79:66:68:01
+janv. 08 15:42:56 atk dnsmasq-dhcp[844]: DHCPACK(enp0s8) 10.1.1.246 00:50:79:66:68:01 VPCS1
 ```
 
 🌞 **Test !**
 
 ```
-
+VPCS> ip dhcp
+DDORA IP 10.1.1.246/24 GW 10.1.1.37
 ```
 
 ### B. Race !
 
-📁 **`p4_dhcp_race.pcap`**
+📁 [p4_dhcp_race.pcap](./p4_dhcp_race.pcapng)
 
 Prewt. 🐈
 
