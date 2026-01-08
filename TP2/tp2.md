@@ -34,7 +34,7 @@ VPCS> ping 10.2.2.11
 84 bytes from 10.2.2.11 icmp_seq=5 ttl=64 time=4.112 ms
 ```
 
-📁 **`p1_routed_ping.pcap`** 
+📁 [p1_routed_ping.pcap](./p1_routed_ping.pcapng)
 
 # TP2 Part2 : C'est mieux avec internet
 
