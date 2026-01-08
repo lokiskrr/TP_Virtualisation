@@ -207,23 +207,47 @@ VPCS> show arp
 🌞 **Installer un serveur DHCP**
 
 ```
+[root@efrei-xmg4agau1 ~]# cat /etc/dnsmasq.conf
+interface=enp0s8
 
+dhcp-range=10.1.1.10,10.1.1.50,12h
+dhcp-option=option:netmask,255.255.255.0
 ```
 
-📁 **`p3_dhcp.pcap`**
+🌞 **Récupérer une IP automatiquement depuis les 3 nodes**
+
+```
+VPCS> ip dhcp
+DDORA IP 10.1.1.45/24 GW 10.1.1.253
+```
+
+```
+VPCS> ip dhcp
+DDORA IP 10.1.1.46/24 GW 10.1.1.253
+```
+
+```
+VPCS> ip dhcp
+DDORA IP 10.1.1.47/24 GW 10.1.1.253
+```
+📁 [p3_dhcp.pcap](./p3_dhcp.pcapng)
 
 ## 5. DHCP lease
 
 🌞 **Bail DHCP**
 
 ```
-
+1767920998 00:50:79:66:68:02 10.1.1.47 VPCS1 01:00:50:79:66:68:02
+1767920908 00:50:79:66:68:01 10.1.1.46 * 01:00:50:79:66:68:01
+1767920561 00:50:79:66:68:00 10.1.1.45 * 01:00:50:79:66:68:00
+~
 ```
 
 🌞 **Use `grep`**
 
 ```
-
+[root@efrei-xmg4agau1 /]# cat var/lib/dnsmasq/dnsmasq.leases | grep VPCS1
+1767920998 00:50:79:66:68:02 10.1.1.47 VPCS1 01:00:50:79:66:68:02
 ```
 
 # Part 4 : real haxor
@@ -247,22 +271,6 @@ VPCS> show arp
 ### B. Race !
 
 📁 **`p4_dhcp_race.pcap`**
-
-## 2. BONUS : DHCP starvation
-
-🌞 **Proof !**
-
-```
-
-```
-
-## 3. BONUS : ARP poisoning
-
-🌞 **Proof !**
-
-```
-
-```
 
 Prewt. 🐈
 
