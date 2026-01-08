@@ -1,31 +1,37 @@
 # TP2 : + de réseau + de hax
 
-## Prérequis
-
-# TP2 Part1 : Network Setup
-
-## 1. Topologie GNS
-
-## 2. Tableau d'adressage
-
-## 3. Clicodrome
-
-## 4. Conf routeur
-
-### A. Global
-
-### B. Conf LAN
-
-## 5. Conf switches
-
-## 6. Clients !
-
 ## 7. Proof or lie
 
 🌞 **Tout le monde doit pouvoir se `ping`**
 
 ```
+VPCS> ping 10.2.1.12
+84 bytes from 10.2.1.12 icmp_seq=1 ttl=64 time=3.768 ms
+84 bytes from 10.2.1.12 icmp_seq=2 ttl=64 time=4.381 ms
+84 bytes from 10.2.1.12 icmp_seq=3 ttl=64 time=3.403 ms
+84 bytes from 10.2.1.12 icmp_seq=4 ttl=64 time=4.268 ms
+84 bytes from 10.2.1.12 icmp_seq=5 ttl=64 time=4.616 ms
 
+VPCS> ping 10.2.2.12
+84 bytes from 10.2.2.12 icmp_seq=1 ttl=64 time=6.294 ms
+84 bytes from 10.2.2.12 icmp_seq=2 ttl=64 time=4.971 ms
+84 bytes from 10.2.2.12 icmp_seq=3 ttl=64 time=4.810 ms
+84 bytes from 10.2.2.12 icmp_seq=4 ttl=64 time=6.799 ms
+84 bytes from 10.2.2.12 icmp_seq=5 ttl=64 time=4.704 ms
+
+VPCS> ping 10.2.1.12
+84 bytes from 10.2.1.12 icmp_seq=1 ttl=64 time=5.386 ms
+84 bytes from 10.2.1.12 icmp_seq=2 ttl=64 time=3.810 ms
+84 bytes from 10.2.1.12 icmp_seq=3 ttl=64 time=4.094 ms
+84 bytes from 10.2.1.12 icmp_seq=4 ttl=64 time=4.024 ms
+84 bytes from 10.2.1.12 icmp_seq=5 ttl=64 time=4.027 ms
+
+VPCS> ping 10.2.2.11
+84 bytes from 10.2.2.11 icmp_seq=1 ttl=64 time=5.054 ms
+84 bytes from 10.2.2.11 icmp_seq=2 ttl=64 time=4.286 ms
+84 bytes from 10.2.2.11 icmp_seq=3 ttl=64 time=4.713 ms
+84 bytes from 10.2.2.11 icmp_seq=4 ttl=64 time=4.740 ms
+84 bytes from 10.2.2.11 icmp_seq=5 ttl=64 time=4.112 ms
 ```
 
 📁 **`p1_routed_ping.pcap`** 
